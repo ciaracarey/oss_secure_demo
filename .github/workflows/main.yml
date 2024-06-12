@@ -17,6 +17,7 @@ permissions:
 env:
   REGISTRY: docker.cloudsmith.io
   IMAGE_NAME: demo/ciara-test/flask_app # OSS_DEMO_INPUTS: Update to {org_name}/{repo_name}/flask_app
+  CLOUDSMITH_REPO_NAME: demo/ciara-test
 
 jobs:
   build:
@@ -49,7 +50,8 @@ jobs:
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           build-args: |
             CLOUDSMITH_ENTITLEMENT_TOKEN=${{ secrets.CLOUDSMITH_ENTITLEMENT_TOKEN }}
-
+            CLOUDSMITH_REPO_NAME=${{ env.CLOUDSMITH_REPO_NAME }}
+            
       # Step to get the image digest
       - name: Get image digest
         id: get-digest
