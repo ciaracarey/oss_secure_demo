@@ -17,7 +17,7 @@ permissions:
 env:
   REGISTRY: docker.cloudsmith.io
   IMAGE_NAME: demo/ciara-test/flask_app # OSS_DEMO_INPUTS: Update to {org_name}/{repo_name}/flask_app
-  CLOUDSMITH_REPO_NAME: demo/ciara-test
+  CLOUDSMITH_REPO_NAME: demo/ciara-test # OSS_DEMO_INPUTS: Update to {org_name}/{repo_name}
 
 jobs:
   build:
