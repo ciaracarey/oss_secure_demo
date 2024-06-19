@@ -1,6 +1,6 @@
 # Use an official Python runtime as a parent image.
 #FROM python:3.12.4-slim
-FROM docker.cloudsmith.io/ciara-demo/ciara-test/python:3.12.4-slim
+FROM docker.cloudsmith.io/ciara-demo/sbom-support/python:3.12.4-slim
 
 # Set the working directory in the container.
 WORKDIR /flask_app
