@@ -4,22 +4,19 @@
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
-updates:
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/flask_app" # Location of package manifests
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: "deps"
-    registries:
-      - cloudsmith
-    open-pull-requests-limit: 10
-    insecure-external-code-execution: allow
-
-
 registries:
   cloudsmith:
-    type: "python-index"
+    type: python-index
     url: "https://dl.cloudsmith.io/basic/ciara-demo/sbom-support/python/simple/"
-    username: "${{ secrets.CLOUDSMITH_USER_NAME }}"
-    password: "${{ secrets.CLOUDSMITH_API_KEY }}"
+    username: "${{secrets.CLOUDSMITH_USER_NAME}}"
+    password: "${{secrets.CLOUDSMITH_API_KEY}}"
+
+updates:
+  - package-ecosystem: "pip"
+    insecure-external-code-execution: allow
+    directory: "/flask_app"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    registries:
+      - cloudsmith
