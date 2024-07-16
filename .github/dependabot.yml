@@ -11,4 +11,13 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "deps"
+    registries:
+      - cloudsmith
     open-pull-requests-limit: 10
+
+registries:
+  cloudsmith:
+    type: "python-index"
+    url: "https://dl.cloudsmith.io/basic/ciara-demo/sbom-support/python/simple/"
+    username: "dependabot"
+    password: "${{ secrets.CLOUDSMITH_API_KEY }}"
