@@ -14,6 +14,8 @@ updates:
     registries:
       - cloudsmith
     open-pull-requests-limit: 10
+    insecure-external-code-execution: allow
+
 
 registries:
   cloudsmith:
