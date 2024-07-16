@@ -16,8 +16,8 @@ permissions:
 
 env:
   REGISTRY: docker.cloudsmith.io
-  IMAGE_NAME: ciara-demo/docker-images/flask_app # OSS_DEMO_INPUTS: Update to {org_name}/{repo_name}/flask_app
-  CLOUDSMITH_REPO_NAME: ciara-demo/docker-images # OSS_DEMO_INPUTS: Update to {org_name}/{repo_name}
+  IMAGE_NAME: ciara-demo/sbom-support/flask_app # OSS_DEMO_INPUTS: Update to {org_name}/{repo_name}/flask_app
+  CLOUDSMITH_REPO_NAME: ciara-demo/sbom-support # OSS_DEMO_INPUTS: Update to {org_name}/{repo_name}
 
 jobs:
   build:
