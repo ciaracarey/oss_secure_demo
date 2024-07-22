@@ -10,7 +10,7 @@ registries:
     url: "https://dl.cloudsmith.io/basic/ciara-demo/sbom-support/python/simple/"
     #username: "${{secrets.CLOUDSMITH_USER_NAME}}"
     #password: "${{secrets.CLOUDSMITH_API_KEY}}"
-    token: "${{secrets.CLOUDSMITH_API_KEY}}"
+    token: "${{secrets.CS_TOKEN_COLON}}"
 
 updates:
   - package-ecosystem: "pip"
